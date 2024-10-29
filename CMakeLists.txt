@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.29)
 project(warships LANGUAGES C CXX)
 
+set(CMAKE_CXX_STANDARD 23)
+
 set(PROJECT_HEADERS
         entities/entities.h
         database/database.h
@@ -51,7 +53,7 @@ enable_testing()
 
 add_executable(${PROJECT_NAME} ${PROJECT_HEADERS} ${PROJECT_SOURCES} ${UNIT_TESTS})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE leveldb nlohmann_json::nlohmann_json gtest_main)
+target_link_libraries(${PROJECT_NAME} PRIVATE leveldb nlohmann_json::nlohmann_json GTest::gtest_main)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
         entities
