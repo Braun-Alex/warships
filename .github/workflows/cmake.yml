@@ -20,7 +20,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y build-essential cmake
 
       - name: Configure CMake project
-        run: cmake -S . -B build
+        run: cmake -S . -ALLOW_DUPLICATE_CUSTOM_TARGETS=TRUE -B build
 
       - name: Build with CMake
         run: cmake --build build

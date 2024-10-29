@@ -3,8 +3,6 @@ project(warships LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 
-set(ALLOW_DUPLICATE_CUSTOM_TARGETS TRUE)
-
 set(PROJECT_HEADERS
         entities/entities.h
         database/database.h
